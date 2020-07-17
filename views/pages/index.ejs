@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Bookshelf</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <%- include("../partials/nav.ejs") %>
+
+    <main class="book-list">
+      <% if (books.length > 0) { %>
+        <% books.forEach(book => { %>
+          <a href="/books/<%= book._id %>">
+            <div class="book-card">
+              <img src="<%= book.imageURL %>" alt="">
+            </div>
+          </a>
+        <% }) %>
+      <% } %>
+    </main>
+
+  </div>
+
+</body>
+</html>

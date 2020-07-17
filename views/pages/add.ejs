@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Bookshelf</title>
+</head>
+<body>
+
+  <div class="container">
+    <%- include("../partials/nav.ejs") %>
+
+    <form action="/books" method="POST">
+      <label for="title">Book Title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="author">Author: </label>
+      <input type="text" id="author" name="author" required>
+      <label for="publisher">Publisher: </label>
+      <input type="text" id="publisher" name="publisher" required>
+      <label for="year">Year Published: </label>
+      <input type="text" id="year" name="year" required>
+      <label for="imageURL">Image URL: </label>
+      <input type="text" id="imageURL" name="imageURL" required>
+      <label for="synopsis">Synopsis: </label>
+      <textarea id="synopsis" name="synopsis" rows="8" required></textarea>
+      <button class="button">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
